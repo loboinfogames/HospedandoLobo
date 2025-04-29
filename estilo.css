@@ -1,11 +1,11 @@
-/* estilo.css */
-
+/* Reset padrão para evitar inconsistências entre navegadores */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Estilização base do corpo */
 body {
     font-family: Arial, sans-serif;
     background-color: #f2f2f2;
@@ -16,6 +16,7 @@ body {
     min-height: 100vh;
 }
 
+/* Cabeçalho da página */
 header {
     background-color: #004080;
     color: #fff;
@@ -23,23 +24,31 @@ header {
     text-align: center;
 }
 
+/* Conteúdo principal */
 main {
     flex: 1;
     padding: 20px;
     text-align: center;
 }
 
+/* Seção com ID content */
 #content {
     margin-bottom: 20px;
     font-size: 1.2rem;
 }
 
+/* Imagem central com efeito animado */
 img {
     max-width: 100%;
     height: auto;
     border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+img:hover {
+    transform: scale(1.05);
 }
 
+/* Rodapé da página */
 footer {
     background-color: #004080;
     color: white;
