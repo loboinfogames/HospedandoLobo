@@ -1,78 +1,52 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proflobo - Ola Mundo</title>
-    <link rel="stylesheet" href="estilo.css">
-    <script src="anima.js" defer></script>
-   
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lobo Fotógrafo</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-    <header>
-        <h1>Ola Mundo!!!</h1>
-    </header>
-    <main>
-        <div id="ambient" style="overflow:hidden; position:absolute; width:100%; height:100vh;"></div>
+  <header>
+    <div class="logo">Matheus <span>FOTÓGRAFO</span></div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Sobre Mim</a></li>
+        <li><a href="#">Meus Trabalhos</a></li>
+        <li><a href="#">Serviços</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contatos</a></li>
+        <li><a href="#" class="cta">Fale comigo</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <!-- DEMO ONLY -->
-  <div class="card my-5 py-4 text-center" style="margin-top: 150px !important; position: absolute; z-index: 9; width: 100%; background-color: transparent; border: 0px;">
-    <p style="margin: 0 auto; border: 1px solid #fff; background-color: #fff000; padding: 20px; border-radius: 12px;">
-      <img style="max-width:200px; width:200px; margin-bottom: 11px;" src="https://marketplace.canva.com/EAGJEy15FEw/2/0/1600w/canva-logotipo-delicado-monograma-feminino-bege-e-branco-SPQ8m6aLtLM.jpg" alt="Logo">
-      <br>
-    </p>
-  </div>
-  <!-- DEMO ONLY -->
-  <script src="bvambient.js"></script>
-  <script>
-    // Você precisa incluir a biblioteca BVAmbient antes deste script funcionar corretamente.
-    // Exemplo: <script src="bvambient.js"></script>
-
-    document.addEventListener("DOMContentLoaded", function () {
-      var demo1 = new BVAmbient({
-        selector: "#ambient",
-        fps: 60,
-        max_transition_speed: 12000,
-        min_transition_speed: 8000,
-        particle_number: 30,
-        particle_maxwidth: 60,
-        particle_minwidth: 10,
-        particle_radius: 50,
-        particle_opacity: true,
-        particle_colision_change: true,
-        particle_background: "#000",
-        particle_image: {
-          image: false,
-          src: ""
-        },
-        responsive: [
-          {
-            breakpoint: 800,
-            settings: {
-              particle_number: 200
-            }
-          },
-          {
-            breakpoint: 480,
-            settings: {
-              particle_number: 10
-            }
-          }
-        ]
-      });
-    });
-  </script>
-        <section id="content">
-            <p>Olá mundo.</p>
-        </section>
-        <img src="https://inexistentman.net/wp-content/uploads/2013/08/banana.gif" alt="Banana dance">
-    </main>
-    <footer>
-        <p>@lobomprof | &copy; 2023</p>
-    </footer>
+  <main class="hero">
+    <div class="gallery">
+      <!-- Substitua os 'src' abaixo pelas suas imagens -->
+      <img src="img1.jpg" alt="Foto 1">
+      <img src="img2.jpg" alt="Foto 2">
+      <img src="img3.jpg" alt="Foto 3">
+      <img src="img4.jpg" alt="Foto 4">
+      <img src="img5.jpg" alt="Foto 5">
+      <img src="img6.jpg" alt="Foto 6">
+      <img src="img7.jpg" alt="Foto 7">
+      <img src="img8.jpg" alt="Foto 8">
+    </div>
+    <div class="text-form">
+      <h1>Matheus Fotógrafo</h1>
+      <p>
+        Retratar famílias, gestantes e principalmente recém-nascidos despertam em mim um sentimento único e a certeza de que quero continuar a escrever através da fotografia lindas histórias e registrar momentos importantes da vida. Confira aqui alguns momentos especiais que passaram pelas minhas lentes.
+      </p>
+      <form>
+        <input type="text" placeholder="Nome" required>
+        <input type="email" placeholder="E-mail" required>
+        <input type="tel" placeholder="Telefone">
+        <textarea placeholder="Mensagem" required></textarea>
+        <button type="submit">Enviar mensagem</button>
+      </form>
+    </div>
+  </main>
 </body>
-
 </html>
