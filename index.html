@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="favicon.png" type="image/png">
   <title>Lobo Fotógrafo</title>
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -11,42 +12,65 @@
     <div class="logo">Matheus <span>FOTÓGRAFO</span></div>
     <nav>
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Sobre Mim</a></li>
-        <li><a href="#">Meus Trabalhos</a></li>
-        <li><a href="#">Serviços</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Contatos</a></li>
-        <li><a href="#" class="cta">Fale comigo</a></li>
+        <li><a href="https://hospedandolobo.netlify.app/">Inicio</a></li>
+        <li><a href="https://www.instagram.com/pixelemfoco/">Meus Trabalhos</a></li>
+        <li><a href="https://proflobo.com.br/contatos/index.html">Contatos</a></li>
+        <li><a href="https://wa.me/5511942109151?text=Oi%20foto%20Lobo%20,%20Tudo%20Bem%20?" class="cta">Fale comigo</a></li>
       </ul>
     </nav>
   </header>
 
   <main class="hero">
-    <div class="gallery">
-      <!-- Substitua os 'src' abaixo pelas suas imagens -->
-      <img src="img1.jpg" alt="Foto 1">
-      <img src="img2.jpg" alt="Foto 2">
-      <img src="img3.jpg" alt="Foto 3">
-      <img src="img4.jpg" alt="Foto 4">
-      <img src="img5.jpg" alt="Foto 5">
-      <img src="img6.jpg" alt="Foto 6">
-      <img src="img7.jpg" alt="Foto 7">
-      <img src="img8.jpg" alt="Foto 8">
+    <div class="galeria">
+      <img src="img1.jpg" alt="Imagem 1" class="imagem grande">
+      <img src="img2.jpg" alt="Imagem 2" class="imagem media">
+      <img src="img3.jpg" alt="Imagem 3" class="imagem pequena">
+      <img src="img4.jpg" alt="Imagem 4" class="imagem grande">
+      <img src="img5.jpg" alt="Imagem 5" class="imagem media">
+      <img src="img6.jpg" alt="Imagem 6" class="imagem pequena">
     </div>
     <div class="text-form">
       <h1>Matheus Fotógrafo</h1>
       <p>
         Retratar famílias, gestantes e principalmente recém-nascidos despertam em mim um sentimento único e a certeza de que quero continuar a escrever através da fotografia lindas histórias e registrar momentos importantes da vida. Confira aqui alguns momentos especiais que passaram pelas minhas lentes.
       </p>
-      <form>
-        <input type="text" placeholder="Nome" required>
-        <input type="email" placeholder="E-mail" required>
-        <input type="tel" placeholder="Telefone">
-        <textarea placeholder="Mensagem" required></textarea>
+      <form id="whatsapp-form">
+        <input type="text" id="nome" placeholder="Nome" required>
+        <textarea id="mensagem" placeholder="Mensagem" required></textarea>
         <button type="submit">Enviar mensagem</button>
       </form>
+      
+      <script>
+        document.getElementById('whatsapp-form').addEventListener('submit', function (e) {
+          e.preventDefault(); // Evita o envio padrão do formulário
+      
+          const nome = document.getElementById('nome').value.trim();
+          const mensagem = document.getElementById('mensagem').value.trim();
+      
+          const texto = `Olá, meu nome é ${nome}. ${mensagem}`;
+          const numero = '5511942109151'; // DDD + número, sem "+" ou espaços
+          const url = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
+      
+          // Abre o WhatsApp em uma nova aba
+          window.open(url, '_blank');
+        });
+      </script>
+      
     </div>
   </main>
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 Seu Nome. Todos os direitos reservados.</p>
+      <p>
+        <a href="https://www.instagram.com/seuinstagram/" target="_blank">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram">
+            <rect x="2" y="2" width="20" height="20" rx="5" fill="none" />
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+          </svg> Siga-nos no Instagram
+        </a>
+      </p>
+    </div>
+  </footer>
 </body>
 </html>
