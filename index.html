@@ -7,6 +7,8 @@
     <title>Proflobo - Ola Mundo</title>
     <link rel="stylesheet" href="estilo.css">
     <script src="anima.js" defer></script>
+   
+
 </head>
 
 <body>
@@ -14,6 +16,55 @@
         <h1>Ola Mundo!!!</h1>
     </header>
     <main>
+        <div id="ambient" style="overflow:hidden; position:absolute; width:100%; height:100vh;"></div>
+
+  <!-- DEMO ONLY -->
+  <div class="card my-5 py-4 text-center" style="margin-top: 150px !important; position: absolute; z-index: 9; width: 100%; background-color: transparent; border: 0px;">
+    <p style="margin: 0 auto; border: 1px solid #fff; background-color: #fff000; padding: 20px; border-radius: 12px;">
+      <img style="max-width:200px; width:200px; margin-bottom: 11px;" src="https://marketplace.canva.com/EAGJEy15FEw/2/0/1600w/canva-logotipo-delicado-monograma-feminino-bege-e-branco-SPQ8m6aLtLM.jpg" alt="Logo">
+      <br>
+    </p>
+  </div>
+  <!-- DEMO ONLY -->
+  <script src="bvambient.js"></script>
+  <script>
+    // Você precisa incluir a biblioteca BVAmbient antes deste script funcionar corretamente.
+    // Exemplo: <script src="bvambient.js"></script>
+
+    document.addEventListener("DOMContentLoaded", function () {
+      var demo1 = new BVAmbient({
+        selector: "#ambient",
+        fps: 60,
+        max_transition_speed: 12000,
+        min_transition_speed: 8000,
+        particle_number: 30,
+        particle_maxwidth: 60,
+        particle_minwidth: 10,
+        particle_radius: 50,
+        particle_opacity: true,
+        particle_colision_change: true,
+        particle_background: "#000",
+        particle_image: {
+          image: false,
+          src: ""
+        },
+        responsive: [
+          {
+            breakpoint: 800,
+            settings: {
+              particle_number: 200
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              particle_number: 10
+            }
+          }
+        ]
+      });
+    });
+  </script>
         <section id="content">
             <p>Olá mundo.</p>
         </section>
